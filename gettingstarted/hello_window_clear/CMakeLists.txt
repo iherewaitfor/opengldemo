@@ -1,4 +1,4 @@
-project(hello_window)
+project(hello_window_clear)
 
 aux_source_directory(. EXAMPLE_SRCS)
 

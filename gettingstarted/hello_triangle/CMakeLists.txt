@@ -1,4 +1,4 @@
-project(hello_window)
+project(hello_triangle)
 
 aux_source_directory(. EXAMPLE_SRCS)
 

@@ -78,4 +78,6 @@ endmacro()
 
 add_subdirectory(glad)
 add_subdirectory(hello_window)
+add_subdirectory(hello_window_clear)
+add_subdirectory(hello_triangle)
 
