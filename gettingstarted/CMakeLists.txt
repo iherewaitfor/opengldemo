@@ -77,9 +77,17 @@ macro(COPY_FILES target file_list source_dir target_dir)
   endforeach()
 endmacro()
 
+configure_file(../configuration/root_directory.h.in configuration/root_directory.h)
+include_directories(${CMAKE_BINARY_DIR}/configuration)
+# first create relevant static libraries required for other projects
+add_library(STB_IMAGE "../learnopenglsrc/stb_image.cpp")
+set(LIBS ${LIBS} STB_IMAGE)
+
 
 add_subdirectory(glad)
 add_subdirectory(hello_window)
 add_subdirectory(hello_window_clear)
 add_subdirectory(hello_triangle)
 add_subdirectory(shaders_class)
+add_subdirectory(textures)
+
