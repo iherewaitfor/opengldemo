@@ -90,4 +90,6 @@ add_subdirectory(hello_window_clear)
 add_subdirectory(hello_triangle)
 add_subdirectory(shaders_class)
 add_subdirectory(textures)
+add_subdirectory(textures_combined)
+
 
