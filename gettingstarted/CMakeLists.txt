@@ -25,6 +25,8 @@ include_directories(${GLFW_DIR}/include)
 set (GLAD_DIR ../glad)
 include_directories(${GLAD_DIR}/include)
 
+include_directories(${PROJECT_SOURCE_DIR}/../include)
+
 
 set(EXAMPLE_TARGET_OUT_DIR "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
 
@@ -80,4 +82,4 @@ add_subdirectory(glad)
 add_subdirectory(hello_window)
 add_subdirectory(hello_window_clear)
 add_subdirectory(hello_triangle)
-
+add_subdirectory(shaders_class)
