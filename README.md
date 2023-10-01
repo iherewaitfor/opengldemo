@@ -25,4 +25,30 @@
   - 指定顶点的某个属性的内存格式
 - glEnableVertexAttribArray
   - 启用顶点的某个属性
+## 片段着色器
+## 纹理 操作
+- glGenTextures
+- glBindTexture
+- glTexParameteri
+- glTexImage2D
+- glGenerateMipmap
+- glActiveTexture
+## shaderProgram
+- glCreateProgram
+- glAttachShader
+- glLinkProgram
+- glUseProgram
+### 给程序变量赋值
+- glGetUniformLocation
+- glUniform1i
 
+## 核心渲染流程
+- glClearColor
+- glClear
+- glUseProgram
+- glBindVertexArray
+- 更新着色器变量
+- 设置纹理
+- glDrawArrays
+- glDrawElements
+- glfwSwapBuffers
