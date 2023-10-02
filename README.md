@@ -10,6 +10,42 @@
 - glCompileShader
 - glDeleteShader
   - 链接完可以删除
+
+```C++
+// vertex shader
+vertex = glCreateShader(GL_VERTEX_SHADER);
+glShaderSource(vertex, 1, &vShaderCode, NULL);
+glCompileShader(vertex);
+checkCompileErrors(vertex, "VERTEX");
+// fragment Shader
+fragment = glCreateShader(GL_FRAGMENT_SHADER);
+glShaderSource(fragment, 1, &fShaderCode, NULL);
+glCompileShader(fragment);
+checkCompileErrors(fragment, "FRAGMENT");
+// shader Program
+ID = glCreateProgram();
+glAttachShader(ID, vertex);
+glAttachShader(ID, fragment);
+glLinkProgram(ID);
+checkCompileErrors(ID, "PROGRAM");
+// delete the shaders as they're linked into our program now and no longer necessary
+glDeleteShader(vertex);
+glDeleteShader(fragment);
+```
+顶点着色器相关的部分代码
+
+```C++
+unsigned int vertex, fragment;
+// vertex shader
+vertex = glCreateShader(GL_VERTEX_SHADER);
+glShaderSource(vertex, 1, &vShaderCode, NULL);
+glCompileShader(vertex);
+
+ID = glCreateProgram();
+glAttachShader(ID, vertex);
+//...
+glDeleteShader(vertex);
+```
 ### 填充顶点数据
 - glGenVertexArrays
 - glBindVertexArray
@@ -26,6 +62,29 @@
 - glEnableVertexAttribArray
   - 启用顶点的某个属性
 ## 片段着色器
+步骤同顶点着色器
+```C++
+unsigned int vertex, fragment;
+// vertex shader
+vertex = glCreateShader(GL_VERTEX_SHADER);
+glShaderSource(vertex, 1, &vShaderCode, NULL);
+glCompileShader(vertex);
+checkCompileErrors(vertex, "VERTEX");
+// fragment Shader
+fragment = glCreateShader(GL_FRAGMENT_SHADER);
+glShaderSource(fragment, 1, &fShaderCode, NULL);
+glCompileShader(fragment);
+checkCompileErrors(fragment, "FRAGMENT");
+// shader Program
+ID = glCreateProgram();
+glAttachShader(ID, vertex);
+glAttachShader(ID, fragment);
+glLinkProgram(ID);
+checkCompileErrors(ID, "PROGRAM");
+// delete the shaders as they're linked into our program now and no longer necessary
+glDeleteShader(vertex);
+glDeleteShader(fragment);
+```
 ## 纹理 操作
 - glGenTextures
 - glBindTexture
