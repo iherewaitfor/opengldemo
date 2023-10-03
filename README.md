@@ -152,6 +152,17 @@ glDeleteShader(fragment);
 - glAttachShader
 - glLinkProgram
 - glUseProgram
+
+···C++
+        // shader Program
+        ID = glCreateProgram();
+        glAttachShader(ID, vertex);
+        glAttachShader(ID, fragment);
+        glLinkProgram(ID);
+
+        //...
+        glUseProgram(ID); 
+```
 ### 给程序变量赋值
 - glGetUniformLocation
 - glUniform1i
