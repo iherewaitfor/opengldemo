@@ -1,3 +1,15 @@
+- [opengldemo](#opengldemo)
+- [opengl环境搭建](#opengl环境搭建)
+  - [glad](#glad)
+  - [glfw](#glfw)
+- [管理流水关键流程](#管理流水关键流程)
+  - [顶点着色器](#顶点着色器)
+    - [填充顶点数据](#填充顶点数据)
+  - [片段着色器](#片段着色器)
+  - [纹理 操作](#纹理-操作)
+  - [shaderProgram](#shaderprogram)
+
+
 # opengldemo
 # opengl环境搭建
 ## glad
